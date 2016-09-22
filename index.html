@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages b.</p>
-</body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/react@latest/dist/react-with-addons.js"></script>
+    <script type="text/javascript" src="https://npmcdn.com/react-dom@latest/dist/react-dom.js"></script>
+    <style type="text/css">
+      
+    </style>
+    <title>Paridhi Sharma</title>
+    <script type="text/babel" language="JavaScript 1.7">
+      var Hello = React.createClass({
+        render: function() {
+          return <div>Hello {this.props.name}</div>;
+        }
+      });
+      
+      ReactDOM.render(
+        <Hello name="World" />,
+        document.getElementById('container')
+      );
+    </script>
+
+  
+  </head>
+  
+  <body>
+    <div id="container">
+      <div data-reactroot="">
+        
+      </div>
+    </div>
+  </body>
 </html>
