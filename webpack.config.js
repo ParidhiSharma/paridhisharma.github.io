@@ -11,7 +11,6 @@ var config = {
     //     filename: 'index.js'
     // },
     output: { // Compile into js/build.js
-        path: path.resolve(__dirname, 'build'),
         filename: "bundle.js"
     },
     devServer: {
@@ -28,7 +27,6 @@ var config = {
                     comments: false,
                 },
             }),
-            new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }, "build"),
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.AggressiveMergingPlugin()
         ],
