@@ -1,0 +1,285 @@
+html {
+  height: 100%;
+}
+
+body {
+  a {
+    color: #000;
+  }
+  margin: 0;
+  font-family: "Open Sans";
+  header{
+    //background: rgba(0, 0, 0, 0.2);
+    top:0;
+    left:0;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    .socialIcons {
+        width: 50%;
+        position: relative;
+        left: 80%;
+    }
+    svg,
+    .instagram,
+    .twitter,
+    .linkedin,
+    .github{
+        display: inline-block;
+        width: 50px;
+        height: 40px;
+        padding: 10px;
+      }
+      .twit {
+        fill: #00acee;
+      }
+      .link {
+        fill: #007fb2;
+      }
+      .gith {
+        fill: #000;
+      }
+      .svg-hide {
+        display: none;
+      }
+  }
+  .home {
+    background-image: url("./images/6.jpg");
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    min-height: 1000px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    .intro {
+      position: absolute;
+      top: 65%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      height: 40%;
+      width: 50%;
+      .Typist {
+        text-shadow: 4px 4px 4px #3c1313;
+        font-size: 32px;
+        color: #3c1313;
+      }
+    }
+  }
+  .app {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(ellipse farthest-side at 100% 100%, #b1b1b1 20%,#a79b9f 40%, #d78745 120%);
+  }
+  .skills {
+    position: relative;
+    .skills-container {
+        width: 80%;
+        height: inherit;
+        text-align: center;
+        margin: 100px auto;
+        .tile {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin: 8px; 
+            border-radius: 10px;
+            .center {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                position: relative;
+            } 
+            &:nth-child(5n+4) {  
+              background-color: rgba(210, 206, 45, 0.91);
+              border: 2px rgba(210, 206, 45, 0.91);
+            }
+            &:nth-child(5n+2) {  
+              background-color: rgba(212, 97, 101, 0.95);
+              border: 2px rgba(212, 97, 101, 0.95);
+            }
+            &:nth-child(5n+3) {  
+              background-color: rgba(255, 165, 0, 0.68);
+              border: 2px rgba(255, 165, 0, 0.68);
+            }
+            &:nth-child(5n+5) {  
+              background-color: #26d298;
+              border: 2px #26d298;
+            }
+            &:nth-child(5n+1) {  
+              background-color: rgba(0, 188, 212, 0.5);
+              border: 2px rgba(0, 188, 212, 0.5);
+            }
+            &:hover {
+              -ms-transform: scale(1.1, 1.1); /* IE 9 */
+              -webkit-transform: scale(1.1, 1.1); /* Safari */
+              transform: scale(1.1, 1.1);
+            }
+        }
+    }
+  }
+  .about {
+    background-image: url("./images/4.jpg");
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  box-shadow: -1px 2px 10px 2px rgba(0,0,0,0.5);
+  
+  &_slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    
+    .img {
+      width:100%;
+      height:100%;
+      background-size:cover; 
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+    
+  }
+  
+  &_history {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      height: 3px;
+      
+      li {
+        width: 15%;
+        box-sizing: border-box;
+        height: inherit;
+        position: relative;
+        &:not(:last-of-type) {
+          margin-right: 5%;
+        }
+        
+        button {
+          border: none;
+          outline: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(255,255,255, 0.5);
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          transition: background-color 300ms ease;
+          &.active {
+            background-color: rgba(255,255,255, 0.95);
+          }
+        }
+      }
+    }
+  }
+  
+  &_control {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0,0.1);
+    border: 0;
+    padding: 0 5px;
+    width: 10%;
+    overflow: hidden;
+    transition: background-color 300ms ease;
+    cursor: pointer;
+    
+    span {
+      display: inline-block;
+      width: 2vw;
+      height: 2vw;
+      position: relative;
+      box-sizing: border-box;
+      opacity: 0.65;
+      border-bottom: 3px solid white;
+      border-left: 3px solid white;
+      transition: opacity 300ms ease;
+    }
+    
+    &:hover {
+      background-color: rgba(0,0,0,0.2);
+      
+      span {
+        opacity: 0.95;
+      }
+    }
+  
+    &__prev {
+      left: 0;
+      padding-left: 12px;
+        span {
+          transform: rotate(45deg);
+        }
+    }
+    
+    &__next {
+      right: 0;
+      padding-right: 12px;
+       span {
+         transform: rotate(-135deg);
+       }
+    }
+  }
+  
+}
+ 
+// animation for slide
+.leave {
+  transform: translateX(0);
+}
+
+.enter-active.enter-next, .enter-active.enter-prev {
+  transform: translateX(0);
+  transition: transform 500ms linear;
+}
+
+.enter-next {
+  transform: translateX(100%);
+}
+
+.enter-prev {
+  transform: translateX(-100%);
+  transition: transform 500ms linear;
+}
+
+.leave-active-next {
+  transform: translateX(-100%);
+  transition: transform 500ms linear;;
+}
+
+.leave.leave-active-prev {
+  transform: translateX(100%);
+  transition: transform 500ms linear;
+}
