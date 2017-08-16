@@ -18,7 +18,7 @@ body {
     .socialIcons {
         width: 50%;
         position: relative;
-        left: 80%;
+        left: 86%;
     }
     svg,
     .instagram,
@@ -44,12 +44,12 @@ body {
       }
   }
   .home {
-    background-image: url("./images/6.jpg");
+    background-image: url("./images/2.jpg");
     width: 100%;
     background-size: cover;
     height: 100vh;
     min-height: 1000px;
-    background-position: center top;
+    background-position: center right;
     background-repeat: no-repeat;
     .intro {
       position: absolute;
@@ -60,9 +60,9 @@ body {
       height: 40%;
       width: 50%;
       .Typist {
-        text-shadow: 4px 4px 4px #3c1313;
+        text-shadow: 4px 4px 4px #171616;
         font-size: 32px;
-        color: #3c1313;
+        color: #171616;
       }
     }
   }
